@@ -1,0 +1,16 @@
+<!--行政区划-->
+
+<template name="wxregion">
+    <picker-view wx:if="{{isShow}}" class="region" indicator-style="height: 50px;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+        <view wx:key="provunique" wx:for="{{provinceData}}" class="addr-item">
+            {{item.name}}
+        </view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:key="cityunique" wx:for="{{cityData}}" class="addr-item">
+            {{item.name}}
+        </view>
+    </picker-view-column>
+</picker-view>
+</template>

@@ -1,0 +1,4 @@
+<!--toast提醒-->
+<template name="wxtoast">
+    <toast duration="3000" hidden="{{hiddenToast}}" bindtap="toastHidden" >获取数据出错，请重试</toast>
+</template>
