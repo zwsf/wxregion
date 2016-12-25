@@ -13,6 +13,7 @@ Page({
         provinceData: [],
         cityData: [],
         region: [0, 0],
+        regionName: '',
         hiddenToast: true
     },
     onLoad: function () {
@@ -52,6 +53,27 @@ Page({
                 cityData: []
             });
         })
+    },
+    tapMasker: function () {
+        this.setData({isShowRegion: false});
+    },
+    preventMaskerMove: function (e) {
+        e.preventDefault();
+    },
+    toggleShowRegion: function (e) {
+        this.setData({isShowRegion: true});
+    },
+    cancelRegion: function (e) {
+        this.setData({isShowRegion: false});
+    },
+    confirmRegion: function (e) {
+        let {region, provinceData, cityData} = this.data;
+        let regionName = provinceData[region[0]].name + '-' + cityData[region[1]].name;
+
+        this.setData({
+            regionName: regionName,
+            isShowRegion: false
+        });
     },
     bindRegionChange: function (e) {
         let me = this;
