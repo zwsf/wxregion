@@ -53,7 +53,7 @@ Page({
             });
         })
     },
-    bindChange: function (e) {
+    bindRegionChange: function (e) {
         let me = this;
         let val = e.detail.value;
         let provinceIndex = val[0];

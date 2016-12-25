@@ -1,7 +1,7 @@
 <!--行政区划-->
 
 <template name="wxregion">
-    <picker-view wx:if="{{isShowRegion}}" class="region" indicator-style="height: 50px;" value="{{region}}" bindchange="bindChange">
+    <picker-view wx:if="{{isShowRegion}}" class="region" indicator-style="height: 50px;" value="{{region}}" bindchange="bindRegionChange">
     <picker-view-column>
         <view wx:key="provunique" wx:for="{{provinceData}}" class="addr-item">
             {{item.name}}
