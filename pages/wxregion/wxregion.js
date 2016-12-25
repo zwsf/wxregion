@@ -12,7 +12,7 @@ Page({
         isShow: true,
         provinceData: [],
         cityData: [],
-        value: [0, 0],
+        region: [0, 0],
         hiddenToast: true
     },
     onLoad: function () {
