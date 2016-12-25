@@ -7,4 +7,4 @@
 </view>
 
 <template is="wxtoast" data="{{hiddenToast}}"></template>
-<template is="wxregion" data="{{provinceData, cityData, region, isShow}}"/>
+<template is="wxregion" data="{{provinceData, cityData, region, isShowRegion}}"/>

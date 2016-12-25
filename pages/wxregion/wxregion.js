@@ -9,7 +9,7 @@ const API = 'http://apis.map.qq.com/ws/district/v1/getchildren?key=PEFBZ-BJLWX-V
 
 Page({
     data: {
-        isShow: true,
+        isShowRegion: true,
         provinceData: [],
         cityData: [],
         region: [0, 0],
