@@ -13,8 +13,7 @@ Page({
         provinceData: [],
         cityData: [],
         region: [0, 0],
-        regionName: '',
-        hiddenToast: true
+        regionName: ''
     },
     onLoad: function () {
         const me = this;
@@ -92,20 +91,25 @@ Page({
                 });
             }
             else {
+                //wx.showToast({
+                    //title: '获取数据出错，请重试',
+                    //icon: 'loading',
+                    //duration: 2000
+                //});
                 me.setData({
-                    cityData: [],
-                    hiddenToast: false
+                    cityData: []
                 });
             }
         })
         .catch(err => {
+            //wx.showToast({
+                //title: '获取数据出错，请重试',
+                //icon: 'loading',
+                //duration: 2000
+            //});
             me.setData({
-                cityData: [],
-                hiddenToast: false
+                cityData: []
             });
         });
-    },
-    toastHidden: function (e) {
-        this.setData({hiddenToast: true});
     }
 })
